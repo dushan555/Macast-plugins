@@ -26,7 +26,7 @@ RENDERER_PATH = os.path.join(SETTING_DIR, RENDERER_DIR)
 LIVE_PATH = os.path.join(RENDERER_PATH, 'macast_live.m3u8')
 
 if not os.path.exists(LIVE_PATH):
-    r = requests.get('http://notag.cn/live/macast_live.m3u8')
+    r = requests.get('https://raw.githubusercontent.com/xfangfang/Macast-plugins/main/live/macast_live.m3u8')
     with open(LIVE_PATH, 'wb') as f:
         f.write(r.content)
 
